@@ -1,0 +1,102 @@
+<div id="work" style="margin-top: 10px; min-height: 100vh" class="white-text">
+  <div class="d-flex justify-content-around">
+    <h1
+      class="opacity-mid d-flex justify-content-around"
+      style="font-size: 2em"
+    >
+      <div>
+        <fa-icon class="icon tag shadow" [icon]="work"></fa-icon>
+        <span style="padding-left: 20px">Work</span>
+      </div>
+    </h1>
+    <div class="pt-3">
+      <div class="border-x-2d" style="width: 30vw"></div>
+    </div>
+  </div>
+  <div style="margin-top: 50px">
+    <div class="section" *ngFor="let item of list; index as i">
+      <div *ngIf="i % 2 == 0" class="row" style="margin: 50px 0px">
+        <div class="image-box col-md-6 col-sm-12" style="height: 400px">
+          <img class="image" src="{{ item.image }}" alt="" srcset="" />
+          <div class="floor"></div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <h2 class="opacity-mid mt-5">{{ item.title }}</h2>
+          <p class="opacity-mid">{{ item.description }}</p>
+          <h2 class="opacity-mid mt-5">Tech. Stack</h2>
+          <p class="opacity-mid">{{ item.stack }}</p>
+          <div
+            class="d-flex justify-content-end"
+            style="position: absolute; width: 100%"
+          >
+            <div class="m-3">
+              <button
+                class="button x5"
+                (click)="codeClick(item)"
+                [disabled]="!item.github"
+              >
+                <fa-icon class="icon" [icon]="code"></fa-icon>
+              </button>
+              <label class="button-label mt-2" style="display: block"
+                ><h3>Code</h3></label
+              >
+            </div>
+            <div class="m-3">
+              <button
+                class="button x5"
+                (click)="linkClick(item)"
+                [disabled]="!item.link"
+              >
+                <fa-icon class="icon" [icon]="link"></fa-icon>
+              </button>
+              <label class="button-label mt-2" style="display: block"
+                ><h3>Link</h3></label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="i % 2 == 1" class="row" style="margin: 50px 0px">
+        <div class="col-md-6 col-sm-12" style="height: 400px">
+          <h2 class="opacity-mid mt-5">{{ item.title }}</h2>
+          <p class="opacity-mid">{{ item.description }}</p>
+          <h2 class="opacity-mid mt-5">Tech. Stack</h2>
+          <p class="opacity-mid">{{ item.stack }}</p>
+          <div
+            class="d-flex justify-content-start"
+            style="position: absolute; width: 100%"
+          >
+            <div class="m-3">
+              <button
+                class="button x5"
+                (click)="codeClick(item)"
+                [disabled]="!item.github"
+              >
+                <fa-icon class="icon" [icon]="code"></fa-icon>
+              </button>
+              <label class="button-label mt-2" style="display: block"
+                ><h3>Code</h3></label
+              >
+            </div>
+            <div class="m-3">
+              <button
+                class="button x5"
+                (click)="linkClick(item)"
+                [disabled]="!item.link"
+              >
+                <fa-icon class="icon" [icon]="link"></fa-icon>
+              </button>
+              <label class="button-label mt-2" style="display: block"
+                ><h3>Link</h3></label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="image-box col-md-6 col-sm-12">
+          <img class="image" src="{{ item.image }}" alt="" srcset="" />
+          <div class="floor"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

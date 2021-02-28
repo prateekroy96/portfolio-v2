@@ -1,0 +1,197 @@
+<div class="white-text" id="about" style="margin-top: 10px; min-height: 100vh">
+  <div class="d-flex justify-content-around">
+    <h1
+      class="opacity-mid d-flex justify-content-around"
+      style="font-size: 2em"
+    >
+      <div>
+        <fa-icon class="icon tag shadow" [icon]="about"></fa-icon>
+        <span style="padding-left: 20px">About</span>
+      </div>
+    </h1>
+    <div class="pt-3">
+      <div class="border-x-2d" style="width: 30vw"></div>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-md-12 d-flex justify-content-around">
+      <div class="bio opacity-mid">
+        {{ bio.join(" ") }}
+        <div
+          style="
+            width: 30%;
+            margin: 40px auto 20px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+          "
+        ></div>
+      </div>
+    </div>
+    <div class="row col-sm-12" style="margin-bottom: 90px">
+      <div *ngFor="let offer of offers" class="col-md-3 col-sm-6">
+        <div
+          style="
+            max-width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+          "
+        >
+          <div class="offer-icon-wrapper">
+            <fa-icon class="icon offer" [icon]="offer.icon"></fa-icon>
+          </div>
+
+          <h2 class="opacity-mid my-4">{{ offer.title }}</h2>
+          <div class="opacity-mid">{{ offer.description }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <h3 class="opacity-mid" style="text-align: left">
+        <fa-icon class="icon tag shadow" [icon]="educationIcon"></fa-icon
+        ><span class="px-2">Work and Education</span>
+      </h3>
+      <div style="position: relative">
+        <div
+          class="scroll-track"
+          [ngStyle]="{ height: 144 * (education.length - 1) + 10 + 'px' }"
+        >
+          <div *ngFor="let item of education; index as i">
+            <div
+              class="dot"
+              style="position: absolute; left: 0px; text-align: center"
+              [ngStyle]="{ top: 144 * i + 5 + 'px' }"
+            >
+              <div class="point"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          *ngFor="let item of education"
+          class="my-4 ml-4"
+          style="text-align: left; min-height: 120px"
+        >
+          <div class="opacity-mid">
+            <fa-icon class="icon tag shadow px-2" [icon]="item.icon"></fa-icon
+            >{{ item.title }}
+          </div>
+          <small class="opacity-mid" style="padding-left: 30px"
+            >({{ item.date }})</small
+          >
+          <div class="opacity-mid" style="padding-left: 30px">
+            {{ item.description }}
+          </div>
+          <div *ngIf="item.score">
+            <div class="opacity-mid" style="padding-left: 30px">
+              {{ item.score }}
+            </div>
+            <div>
+              <div
+                class="border-x-4 d-flex align-items-start"
+                style="width: 150px; margin-left: 30px; margin-top: 10px"
+              >
+                <div
+                  class="progress cyan"
+                  [ngStyle]="{ width: item.percentage + '%' }"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+      <h3
+        class="opacity-mid d-flex justify-content-between"
+        style="text-align: left"
+      >
+        <div>
+          <fa-icon class="icon tag shadow" [icon]="expIcon"></fa-icon
+          ><span style="padding-left: 10px; padding-right: 30px"
+            >Experience</span
+          >
+        </div>
+        <div>
+          <small class="red-text">Personal</small> /
+          <small class="cyan-text"> Professional</small>
+        </div>
+      </h3>
+      <div class="section">
+        <div class="row" style="height: 400px; text-align: left">
+          <!-- <ngx-charts-bar-horizontal-2d
+            [barPadding]="5"
+            [showGridLines]="showGridLines"
+            [scheme]="colorScheme"
+            [customColors]="customColors"
+            [schemeType]="schemeType"
+            [results]="multi"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [legendPosition]="legendPosition"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            (select)="onSelect($event)"
+            (activate)="onActivate($event)"
+            (deactivate)="onDeactivate($event)"
+            [view]="view"
+          >
+          </ngx-charts-bar-horizontal-2d> -->
+          <div class="col-md-6 col-sm-12" *ngFor="let skill of skills">
+            <small class="opacity-mid" style="padding-left: 30px">
+              {{ skill.title }}
+            </small>
+            <div>
+              <div
+                class="border-x-4 d-flex align-items-start"
+                style="
+                  width: 80%;
+                  margin-left: 10%;
+                  margin-top: 4px;
+                  margin-bottom: 8px;
+                "
+              >
+                <div
+                  class="progress red"
+                  [ngStyle]="{ width: (skill.noob_exp * 100) / totalExp + '%' }"
+                ></div>
+                <div
+                  class="progress cyan"
+                  [ngStyle]="{ width: (skill.pro_exp * 100) / totalExp + '%' }"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: left">
+        <h3 class="opacity-mid pt-3">
+          <fa-icon class="icon tag shadow" [icon]="info"></fa-icon
+          ><span style="padding-left: 10px">Resume</span>
+        </h3>
+        <div class="d-flex justify-content-start" style="width: 100%">
+          <div class="m-3">
+            <button class="button x5" (click)="resumeDocClick()">
+              <fa-icon class="icon" [icon]="doc"></fa-icon>
+            </button>
+            <label class="button-label mt-2" style="display: block"
+              ><h3 style="text-align: center">Doc</h3></label
+            >
+          </div>
+          <div class="m-3">
+            <button class="button x5" (click)="resumePdfClick()">
+              <fa-icon class="icon" [icon]="pdf"></fa-icon>
+            </button>
+            <label class="button-label mt-2" style="display: block"
+              ><h3 style="text-align: center">PDF</h3></label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

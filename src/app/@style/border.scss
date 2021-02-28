@@ -1,0 +1,37 @@
+@import "./variables.scss";
+.border-x-4 {
+  height: 4px;
+  border-radius: 2px;
+  box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.4),
+    inset 0px -2px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.border-inverted-x-4 {
+  height: 4px;
+  border-radius: 2px;
+  box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.1),
+    inset 0px -2px 1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.border-x-4 .progress.cyan {
+  margin-top: 0.5px;
+  height: 3px;
+  background-image: radial-gradient($icon-color-2, $icon-color-1);
+}
+.border-x-4 .progress.red {
+  margin-top: 0.5px;
+  height: 3px;
+  background-image: radial-gradient($error-1, $error-3);
+}
+
+.border-y-2 {
+  display: inline-block;
+  width: 2px;
+  border-radius: 1px;
+  box-shadow: inset 1px 0px 1px 0px rgba(0, 0, 0, 0.4),
+    inset -1px 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+
+.border-x-2d {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}

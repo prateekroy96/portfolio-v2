@@ -1,0 +1,51 @@
+<mat-toolbar
+  class="head"
+  style="margin-top: 0px; margin-bottom: calc(50vh - 200px); z-index: 100"
+>
+  <div class="d-flex justify-content-around" style="padding-top: 3px">
+    <h5
+      (click)="app.scrollTo('home')"
+      class="opacity-min label"
+      style="text-align: center"
+      [ngClass]="{ active: currentSection == 'home' }"
+    >
+      <fa-icon class="icon tag" [icon]="home"></fa-icon>
+    </h5>
+    <span
+      class="border-y-2"
+      style="height: 24px; transform: translate(0px, 6px)"
+    ></span>
+    <h5
+      (click)="app.scrollTo('work')"
+      class="opacity-min label"
+      style="text-align: center"
+      [ngClass]="{ active: currentSection == 'work' }"
+    >
+      <fa-icon class="icon tag" [icon]="work"></fa-icon>
+    </h5>
+    <span
+      class="border-y-2"
+      style="height: 24px; transform: translate(0px, 6px)"
+    ></span>
+    <h5
+      (click)="app.scrollTo('about')"
+      class="opacity-min label"
+      style="text-align: center"
+      [ngClass]="{ active: currentSection == 'about' }"
+    >
+      <fa-icon class="icon tag" [icon]="about"></fa-icon>
+    </h5>
+    <span
+      class="border-y-2"
+      style="height: 24px; transform: translate(0px, 6px)"
+    ></span>
+    <h5
+      (click)="app.scrollTo('contact')"
+      class="opacity-min label"
+      style="text-align: center"
+      [ngClass]="{ active: currentSection == 'contact' }"
+    >
+      <fa-icon class="icon tag" [icon]="contact"></fa-icon>
+    </h5>
+  </div>
+</mat-toolbar>

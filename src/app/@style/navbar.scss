@@ -1,0 +1,49 @@
+@import "./variables.scss";
+$navHeight: 50px;
+
+mat-toolbar.head {
+  min-width: 330px;
+  max-width: 400px;
+  height: $navHeight;
+  top: 5px;
+  position: sticky;
+  border-radius: $navHeight/2;
+  box-shadow: 0px -7px 20px $top-shadow, 0px 7px 20px $bottom-shadow,
+    0px 17px 17px 0px $bottom-shadow2,
+    inset 0px -3px 10px 0px rgba(0, 0, 0, 0.4),
+    inset 0px 3px 10px 0px rgba(255, 255, 255, 0.1);
+  //border: 3px solid $button-border;
+  display: inline-block;
+  background: $background;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.label .tag {
+  text-decoration: none !important;
+  opacity: 0.2;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 3.5em;
+
+  transition-property: opacity, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+.label:hover .tag,
+.label:focus .tag,
+.label.focus .tag,
+.label.active .tag {
+  opacity: 0.9;
+  color: $icon-color-2;
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(92, 237, 254, 0.6));
+  filter: drop-shadow(0px 0px 10px rgba(92, 237, 254, 0.4));
+}

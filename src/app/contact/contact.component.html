@@ -1,0 +1,185 @@
+<div
+  class="white-text"
+  id="contact"
+  style="margin-top: 10px; min-height: 100vh"
+>
+  <div class="d-flex justify-content-around">
+    <h1
+      class="opacity-mid d-flex justify-content-around"
+      style="font-size: 2em"
+    >
+      <div>
+        <fa-icon class="icon tag shadow" [icon]="contact"></fa-icon>
+        <span style="padding-left: 20px">Contact</span>
+      </div>
+    </h1>
+    <div class="pt-3">
+      <div class="border-x-2d" style="width: 30vw"></div>
+    </div>
+  </div>
+  <div>
+    <h2 class="opacity-mid m-5" style="text-align: center">Get in touch.</h2>
+    <div class="mail-box">
+      <form class="row" [formGroup]="mailForm" (ngSubmit)="sendMail()">
+        <div class="col-md-6 col-sm-12 form-group">
+          <label class="opacity-mid">Name*:</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="John Doe"
+            formControlName="name"
+            [ngClass]="{
+              'invalid-inp':
+                (name.touched || mailFormState.submitted) && name.invalid
+            }"
+          />
+          <div class="error-wrap">
+            <div
+              class="error"
+              *ngIf="(name.touched || mailFormState.submitted) && name.invalid"
+            >
+              Invalid Name
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 form-group">
+          <label class="opacity-mid">Email*:</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="johndoe@gmail.com"
+            formControlName="email"
+            [ngClass]="{
+              'invalid-inp':
+                (email.touched || mailFormState.submitted) && email.invalid
+            }"
+          />
+          <div class="error-wrap">
+            <div
+              class="error"
+              *ngIf="
+                (email.touched || mailFormState.submitted) && email.invalid
+              "
+            >
+              Invalid Email
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 form-group">
+          <label class="opacity-mid">Subject*:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="subject"
+            [ngClass]="{
+              'invalid-inp':
+                (subject.touched || mailFormState.submitted) && subject.invalid
+            }"
+          />
+          <div class="error-wrap">
+            <div
+              class="error"
+              *ngIf="
+                (subject.touched || mailFormState.submitted) && subject.invalid
+              "
+            >
+              Invalid Subject
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 form-group">
+          <label class="opacity-mid">Message*:</label>
+          <textarea
+            class="form-control"
+            formControlName="comments"
+            [ngClass]="{
+              'invalid-inp':
+                (comments.touched || mailFormState.submitted) &&
+                comments.invalid
+            }"
+          ></textarea>
+          <div class="error-wrap">
+            <div
+              class="error"
+              *ngIf="
+                (comments.touched || mailFormState.submitted) &&
+                comments.invalid
+              "
+            >
+              Invalid Message
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 d-flex flex-wrap justify-content-end">
+          <div class="ml-4 mb-3">
+            <button
+              class="button label x5"
+              type="button"
+              style="width: 150px"
+              (click)="refresh()"
+            >
+              <label class="opacity-mid" class="button-label"
+                ><div
+                  style="
+                    text-align: center;
+                    margin: 0px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    height: 27px;
+                  "
+                >
+                  Reset
+                </div></label
+              >
+              <fa-icon class="icon" [icon]="reset"></fa-icon>
+            </button>
+          </div>
+          <div class="ml-4 mb-3">
+            <button
+              class="button label x5"
+              type="submit"
+              style="width: 150px"
+              [disabled]="mailFormState.loading"
+            >
+              <label class="opacity-mid" class="button-label"
+                ><div
+                  style="
+                    text-align: center;
+                    margin: 0px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    height: 27px;
+                  "
+                >
+                  Submit
+                </div></label
+              >
+              <fa-icon class="icon" [icon]="send"></fa-icon>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <h3 class="mt-4 opacity-max" style="height: 50px">
+      <div class="cyan-text" *ngIf="mailFormState.success">
+        Thanks for the feedback!
+      </div>
+      <div class="red-text" *ngIf="mailFormState.fail">
+        Sorry! Message couldn't be sent. Please try again later.
+      </div>
+    </h3>
+    <div class="row" style="text-align: left; margin: 0px 2vw">
+      <div class="col-md-6 col-sm-12">
+        <div class="info">
+          <fa-icon class="icon" [icon]="mail"></fa-icon>
+          <span class="opacity-mid">royprateek96@gmail.com</span>
+        </div>
+        <div class="info">
+          <fa-icon class="icon" [icon]="location"></fa-icon>
+          <span class="opacity-mid">Delhi, India</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+@import "./@style/variables.scss";
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+.main {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #cccccc;
+  background-size: 1920px 1080px;
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+.scroll-track {
+  display: inline-block;
+  width: 4px;
+  top: 50px;
+  z-index: -10;
+  height: calc(100vh - 100px);
+  border-radius: 2px;
+  box-shadow: inset 2px 0px 2px 0px rgba(0, 0, 0, 0.4),
+    inset -2px 0px 2px 0px rgba(255, 255, 255, 0.1);
+  position: fixed;
+  right: 10px;
+}
+.scroll-track-2 {
+  position: fixed;
+  display: inline-block;
+  width: 30px;
+  top: 0px;
+  position: fixed;
+  height: calc(100vh - 100px);
+  z-index: -5;
+  right: 0px;
+  position: fixed;
+}
+.scroll-track .progress {
+  margin: 0px 0.5px;
+  width: 3px;
+  background-image: radial-gradient($icon-color-2, $icon-color-1);
+  height: 50%;
+}
+.scroll-thumb {
+  height: 100px;
+  width: 24px;
+  border-radius: 12px;
+  background: $background;
+  box-shadow: 0px 7px 20px $bottom-shadow, 0px 17px 17px 0px $bottom-shadow2,
+    -5px 0px 10px 0px rgba(0, 0, 0, 0.4),
+    inset 5px 0px 10px 0px rgba(255, 255, 255, 0.1);
+  z-index: -5;
+  position: absolute;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-thumb:hover {
+  background: red;
+}
