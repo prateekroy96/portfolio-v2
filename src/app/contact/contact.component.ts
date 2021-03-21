@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit {
       name: [null, [Validators.required, Validators.maxLength(30)]],
       email: [null, [Validators.required, Validators.email]],
       subject: [null, [Validators.required, Validators.maxLength(30)]],
-      comments: [null, [Validators.required, Validators.maxLength(500)]],
+      message: [null, [Validators.required, Validators.maxLength(500)]],
     });
   }
   contact: any = faEnvelope;
@@ -51,8 +51,8 @@ export class ContactComponent implements OnInit {
   get subject() {
     return this.mailForm.get('subject');
   }
-  get comments() {
-    return this.mailForm.get('comments');
+  get message() {
+    return this.mailForm.get('message');
   }
   mailSub: Subscription;
   sendMail() {

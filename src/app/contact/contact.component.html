@@ -91,19 +91,17 @@
           <label class="opacity-mid">Message*:</label>
           <textarea
             class="form-control"
-            formControlName="comments"
+            formControlName="message"
             [ngClass]="{
               'invalid-inp':
-                (comments.touched || mailFormState.submitted) &&
-                comments.invalid
+                (message.touched || mailFormState.submitted) && message.invalid
             }"
           ></textarea>
           <div class="error-wrap">
             <div
               class="error"
               *ngIf="
-                (comments.touched || mailFormState.submitted) &&
-                comments.invalid
+                (message.touched || mailFormState.submitted) && message.invalid
               "
             >
               Invalid Message

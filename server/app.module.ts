@@ -3,6 +3,7 @@ import { AngularUniversalModule } from '@nestjs/ng-universal';
 import { join } from 'path';
 import { AppServerModule } from '../src/main.server';
 import { MailController } from './mail/mail.controller';
+import { MailService } from './mail/mail.service';
 
 @Module({
   imports: [
@@ -12,5 +13,6 @@ import { MailController } from './mail/mail.controller';
     }),
   ],
   controllers: [MailController],
+  providers: [MailService],
 })
 export class AppModule {}

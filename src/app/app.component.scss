@@ -64,3 +64,9 @@
 .scroll-thumb:hover {
   background: red;
 }
+@media (max-width: 767px) {
+  .scroll-track,
+  .scroll-track-2 {
+    display: none;
+  }
+}
