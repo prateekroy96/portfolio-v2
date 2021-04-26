@@ -11,12 +11,14 @@ export class MailService {
           pass: 'botmaileric',
         },
       });
+      console.log(body);
       var mailOptions = {
-        from: `Portfolio Contact <${body.name}>`,
+        from: `Portfolio Contact - ${body.name}`,
         to: 'royprateek96@gmail.com',
         subject: body.subject,
-        text: body.message,
+        text: body.message + '\nFrom: ' + body.name + '\nEmail: ' + body.email,
       };
+      console.log(mailOptions);
       let resp = false;
 
       transporter.sendMail(mailOptions, function (error, info) {

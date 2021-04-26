@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  faHome,
-  faBriefcase,
-  faAddressCard,
-  faEnvelopeOpenText,
-  faEnvelope,
-  faCode,
-  faExternalLinkAlt,
-} from '@fortawesome/free-solid-svg-icons';
+// import {
+//   faHome,
+//   faBriefcase,
+//   faAddressCard,
+//   faEnvelopeOpenText,
+//   faEnvelope,
+//   faCode,
+//   faExternalLinkAlt,
+// } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent implements OnInit {
-  work: any = faBriefcase;
-  code: any = faCode;
-  link: any = faExternalLinkAlt;
+  // work: any = faBriefcase;
+  // code: any = faCode;
+  // link: any = faExternalLinkAlt;
   list: Project[];
   constructor() {
     this.list = [

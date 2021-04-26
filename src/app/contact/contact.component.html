@@ -9,7 +9,8 @@
       style="font-size: 2em"
     >
       <div>
-        <fa-icon class="icon tag shadow" [icon]="contact"></fa-icon>
+        <!-- <fa-icon class="icon tag shadow" [icon]="contact"></fa-icon> -->
+        <i class="fa fa-envelope icon tag shadow"></i>
         <span style="padding-left: 20px">Contact</span>
       </div>
     </h1>
@@ -128,7 +129,8 @@
                   Reset
                 </div></label
               >
-              <fa-icon class="icon" [icon]="reset"></fa-icon>
+              <!-- <fa-icon class="icon" [icon]="reset"></fa-icon> -->
+              <i class="fa fa-undo icon"></i>
             </button>
           </div>
           <div class="ml-4 mb-3">
@@ -150,7 +152,8 @@
                   Submit
                 </div></label
               >
-              <fa-icon class="icon" [icon]="send"></fa-icon>
+              <!-- <fa-icon class="icon" [icon]="send"></fa-icon> -->
+              <i class="fa fa-paper-plane icon"></i>
             </button>
           </div>
         </div>
@@ -166,16 +169,37 @@
     </h3>
     <div class="row" style="text-align: left; margin: 0px 2vw">
       <div class="col-md-6 col-sm-12">
-        <div class="info">
-          <fa-icon class="icon" [icon]="mail"></fa-icon>
-          <span class="opacity-mid">royprateek96@gmail.com</span>
-        </div>
-        <div class="info">
-          <fa-icon class="icon" [icon]="location"></fa-icon>
-          <span class="opacity-mid">Delhi, India</span>
-        </div>
+        <a href="mailto: royprateek96@gmail.com" target="_blank" class="info">
+          <!-- <fa-icon class="icon" [icon]="mail"></fa-icon> -->
+          <i class="fa fa-paper-plane icon"></i>
+          <span>royprateek96@gmail.com</span>
+        </a>
+        <a
+          href="https://www.google.com/maps/place/Delhi/"
+          target="_blank"
+          class="info"
+        >
+          <!-- <fa-icon class="icon" [icon]="location"></fa-icon> -->
+          <i class="fa fa-map-marker icon"></i>
+          <span>Delhi, India</span>
+        </a>
       </div>
-      <div class="col-md-6 col-sm-12"></div>
+      <div class="col-md-6 col-sm-12">
+        <a href="https://github.com/prateekroy96" target="_blank" class="info">
+          <!-- <fa-icon class="icon" [icon]="mail"></fa-icon> -->
+          <i class="fa fa-github icon"></i>
+          <span>Github</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/prateek-roy-563b8a188/"
+          target="_blank"
+          class="info"
+        >
+          <!-- <fa-icon class="icon" [icon]="location"></fa-icon> -->
+          <i class="fa fa-linkedin icon"></i>
+          <span>LinkedIN</span>
+        </a>
+      </div>
     </div>
   </div>
 </div>

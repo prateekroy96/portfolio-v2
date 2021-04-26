@@ -5,7 +5,8 @@
       style="font-size: 2em"
     >
       <div>
-        <fa-icon class="icon tag shadow" [icon]="about"></fa-icon>
+        <!-- <fa-icon class="icon tag shadow" [icon]="about"></fa-icon> -->
+        <i class="fa fa-address-card icon tag shadow"></i>
         <span style="padding-left: 20px">About</span>
       </div>
     </h1>
@@ -38,7 +39,8 @@
           "
         >
           <div class="offer-icon-wrapper">
-            <fa-icon class="icon offer" [icon]="offer.icon"></fa-icon>
+            <!-- <fa-icon class="icon offer" [icon]="offer.icon"></fa-icon> -->
+            <i class="fa icon offer" [ngClass]="offer.icon"></i>
           </div>
 
           <h2 class="opacity-mid my-4">{{ offer.title }}</h2>
@@ -48,7 +50,8 @@
     </div>
     <div class="col-md-6 col-sm-12">
       <h3 class="opacity-mid" style="text-align: left">
-        <fa-icon class="icon tag shadow" [icon]="educationIcon"></fa-icon
+        <!-- <fa-icon class="icon tag shadow" [icon]="educationIcon"></fa-icon> -->
+        <i class="fa fa-bar-chart icon tag shadow"></i
         ><span class="px-2">Work and Education</span>
       </h3>
       <div style="position: relative">
@@ -72,8 +75,9 @@
           style="text-align: left; min-height: 120px"
         >
           <div class="opacity-mid">
-            <fa-icon class="icon tag shadow px-2" [icon]="item.icon"></fa-icon
-            >{{ item.title }}
+            <!-- <fa-icon class="icon tag shadow px-2" [icon]="item.icon"></fa-icon> -->
+            <i class="fa icon tag shadow px-2" [ngClass]="item.icon"></i>
+            {{ item.title }}
           </div>
           <small class="opacity-mid" style="padding-left: 30px"
             >({{ item.date }})</small
@@ -107,13 +111,14 @@
         style="text-align: left"
       >
         <div>
-          <fa-icon class="icon tag shadow" [icon]="expIcon"></fa-icon
+          <!-- <fa-icon class="icon tag shadow" [icon]="expIcon"></fa-icon> -->
+          <i class="fa fa-line-chart icon tag shadow"></i
           ><span style="padding-left: 10px; padding-right: 30px"
-            >Experience</span
+            >Experience <small>(months)</small></span
           >
         </div>
         <div>
-          <small class="red-text">Personal</small> /
+          <small class="red-text">Personal</small> +
           <small class="cyan-text"> Professional</small>
         </div>
       </h3>
@@ -152,7 +157,7 @@
                   width: 80%;
                   margin-left: 10%;
                   margin-top: 4px;
-                  margin-bottom: 8px;
+                  margin-bottom: 6px;
                 "
               >
                 <div
@@ -164,19 +169,28 @@
                   [ngStyle]="{ width: (skill.pro_exp * 100) / totalExp + '%' }"
                 ></div>
               </div>
+              <div
+                class="opacity-mid"
+                style="text-align: right; margin: 0px 10%"
+              >
+                <small class="red-text">{{ skill.noob_exp }}</small> +
+                <small class="cyan-text">{{ skill.pro_exp }}</small>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div style="text-align: left">
         <h3 class="opacity-mid pt-3">
-          <fa-icon class="icon tag shadow" [icon]="info"></fa-icon
+          <!-- <fa-icon class="icon tag shadow" [icon]="info"></fa-icon> -->
+          <i class="fa fa-file icon tag shadow"></i
           ><span style="padding-left: 10px">Resume</span>
         </h3>
         <div class="d-flex justify-content-start" style="width: 100%">
           <div class="m-3">
             <button class="button x5" (click)="resumeDocClick()">
-              <fa-icon class="icon" [icon]="doc"></fa-icon>
+              <!-- <fa-icon class="icon" [icon]="doc"></fa-icon> -->
+              <i class="fa fa-download icon"></i>
             </button>
             <label class="button-label mt-2" style="display: block"
               ><h3 style="text-align: center">Doc</h3></label
@@ -184,7 +198,8 @@
           </div>
           <div class="m-3">
             <button class="button x5" (click)="resumePdfClick()">
-              <fa-icon class="icon" [icon]="pdf"></fa-icon>
+              <!-- <fa-icon class="icon" [icon]="pdf"></fa-icon> -->
+              <i class="fa fa-file-pdf-o icon"></i>
             </button>
             <label class="button-label mt-2" style="display: block"
               ><h3 style="text-align: center">PDF</h3></label

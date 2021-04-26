@@ -1,13 +1,13 @@
 import { AppService } from './../app.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {
-  faEnvelope,
-  faPaperPlane,
-  faUndo,
-  faEnvelopeOpenText,
-  faMapMarkerAlt,
-} from '@fortawesome/free-solid-svg-icons';
+// import {
+//   faEnvelope,
+//   faPaperPlane,
+//   faUndo,
+//   faEnvelopeOpenText,
+//   faMapMarkerAlt,
+// } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-contact',
@@ -15,10 +15,11 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  send: any = faPaperPlane;
-  reset: any = faUndo;
-  mail: any = faPaperPlane;
-  location: any = faMapMarkerAlt;
+  // send: any = faPaperPlane;
+  // reset: any = faUndo;
+  // mail: any = faPaperPlane;
+  // location: any = faMapMarkerAlt;
+  // contact: any = faEnvelope;
 
   mailForm: FormGroup;
   mailFormState: {
@@ -40,7 +41,7 @@ export class ContactComponent implements OnInit {
       message: [null, [Validators.required, Validators.maxLength(500)]],
     });
   }
-  contact: any = faEnvelope;
+
   ngOnInit(): void {}
   get email() {
     return this.mailForm.get('email');
@@ -56,6 +57,8 @@ export class ContactComponent implements OnInit {
   }
   mailSub: Subscription;
   sendMail() {
+    this.mailFormState.fail = false;
+    this.mailFormState.success = false;
     if (this.mailFormState.loading) return;
     this.mailFormState.submitted = true;
     if (this.mailForm.invalid) return;

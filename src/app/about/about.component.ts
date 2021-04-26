@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  faWrench,
-  faAddressCard,
-  faPen,
-  faGraduationCap,
-  faChartBar,
-  faStar,
-  faChartLine,
-  faRocket,
-  faLaptop,
-  faLightbulb,
-  faCogs,
-  faFile,
-  faFileDownload,
-  faFilePdf,
-} from '@fortawesome/free-solid-svg-icons';
+// import {
+//   faWrench,
+//   faAddressCard,
+//   faPen,
+//   faGraduationCap,
+//   faChartBar,
+//   faStar,
+//   faChartLine,
+//   faRocket,
+//   faLaptop,
+//   faLightbulb,
+//   faCogs,
+//   faFile,
+//   faFileDownload,
+//   faFilePdf,
+// } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -54,34 +54,34 @@ export class AboutComponent implements OnInit {
   }
 
   // chart - end
-  about: any = faAddressCard;
-  educationIcon: any = faChartBar;
-  skillIcon: any = faStar;
-  expIcon: any = faChartLine;
-  info: any = faFile;
-  doc: any = faFileDownload;
-  pdf: any = faFilePdf;
+  // about: any = faAddressCard;
+  // educationIcon: any = faChartBar;
+  // skillIcon: any = faStar;
+  // expIcon: any = faChartLine;
+  // info: any = faFile;
+  // doc: any = faFileDownload;
+  // pdf: any = faFilePdf;
   jobStart: Date = new Date('2019-11-01');
   today: Date = new Date();
   offers: any[] = [
     {
-      icon: faRocket,
+      icon: 'fa-rocket',
       title: 'Fast',
       description:
         'Fast load times and lag free interaction, my highest priority.',
     },
     {
-      icon: faLaptop,
+      icon: 'fa-laptop',
       title: 'Responsive',
       description: 'My layouts will work on any device, big or small.',
     },
     {
-      icon: faLightbulb,
+      icon: 'fa-exclamation',
       title: 'Intuitive',
       description: 'Strong preference for easy to use, intuitive UX/UI.',
     },
     {
-      icon: faCogs,
+      icon: 'fa-cogs',
       title: 'Dynamic',
       description:
         "Websites don't have to be static, I love making pages come to life.",
@@ -129,7 +129,7 @@ export class AboutComponent implements OnInit {
       date: '2019 - Present',
       score: '',
       percentage: '',
-      icon: faWrench,
+      icon: 'fa-wrench',
     },
     {
       title: 'B. Tech, Civil Engineering',
@@ -137,7 +137,7 @@ export class AboutComponent implements OnInit {
       date: '2014 - 2018',
       score: 'CPI: 7.2',
       percentage: '72',
-      icon: faGraduationCap,
+      icon: 'fa-graduation-cap',
     },
     {
       title: 'Senior Secondary',
@@ -145,7 +145,7 @@ export class AboutComponent implements OnInit {
       date: '2014',
       score: 'Score: 93.2%',
       percentage: '93',
-      icon: faPen,
+      icon: 'fa-pencil',
     },
     {
       title: 'Senior',
@@ -153,7 +153,7 @@ export class AboutComponent implements OnInit {
       date: '2012',
       score: 'CGPA: 10 ',
       percentage: '100',
-      icon: faPen,
+      icon: 'fa-pencil',
     },
   ];
 
