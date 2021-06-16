@@ -21,16 +21,20 @@ export class ProjectComponent implements OnInit {
   constructor() {
     this.list = [
       {
-        title: 'Weather App',
-        image: './assets/images/weather-monitor.png',
-        description: 'TBD...',
-        github: 'https://github.com/prateekroy96/Weather-Web-App',
-        link: 'https://github.com/prateekroy96/Weather-Web-App',
-        stack: 'Angular, Bootstrap, Node.js, NestJS, MongoDB',
+        title: 'Autter - Messaging App',
+        image: './assets/images/autter-monitor.png',
+        for: 'Personal Project',
+
+        description:
+          'A simple messaging app for one-to-one messaging among friends. Messages are sent over web sockets via an XMPP server.',
+        github: 'https://github.com/prateekroy96/autter-chat',
+        link: '',
+        stack: 'Angular, Bootstrap, Express, NestJS, MySQL, Ejabberd, Docker',
       },
       {
         title: 'Police Record Management',
         image: './assets/images/mpp-monitor.png',
+        for: 'Beadcore InfoTech Pvt. Ltd.',
         description:
           'Management of Police Station Records, additionally uses facial recognition to search through the records of criminals, missing and found children.',
         github: '',
@@ -40,6 +44,7 @@ export class ProjectComponent implements OnInit {
       {
         title: 'Attendance Management System',
         image: './assets/images/ams-monitor.png',
+        for: 'Beadcore InfoTech Pvt. Ltd.',
         description:
           'An application to take and manage attendance via facial recognition of employees',
         github: '',

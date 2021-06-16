@@ -23,6 +23,9 @@
         </div>
         <div class="col-md-6 col-sm-12">
           <h2 class="opacity-mid mt-5">{{ item.title }}</h2>
+          <p class="opacity-mid mb-4" style="font-style: italic">
+            {{ item.for }}
+          </p>
           <p class="opacity-mid">{{ item.description }}</p>
           <h2 class="opacity-mid mt-5">Tech. Stack</h2>
           <p class="opacity-mid">{{ item.stack }}</p>
@@ -62,6 +65,9 @@
       <div *ngIf="i % 2 == 1" class="row" style="margin: 50px 0px">
         <div class="col-md-6 col-sm-12" style="height: 400px">
           <h2 class="opacity-mid mt-5">{{ item.title }}</h2>
+          <p class="opacity-mid mb-4" style="font-style: italic">
+            {{ item.for }}
+          </p>
           <p class="opacity-mid">{{ item.description }}</p>
           <h2 class="opacity-mid mt-5">Tech. Stack</h2>
           <p class="opacity-mid">{{ item.stack }}</p>
