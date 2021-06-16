@@ -1,5 +1,4 @@
-FROM node:latest as prod
-RUN apk update && apk add python make g++
+FROM node:11.12.0-alpine
 WORKDIR /app
 COPY . .
 RUN npm install
