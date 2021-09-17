@@ -1,27 +1,4 @@
 @import "./variables.scss";
-/* width */
 ::-webkit-scrollbar {
-  width: 24px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb:vertical {
-  visibility: hidden;
-  background: $background;
-  border-radius: 10px;
-  height: 20px;
-  box-shadow: inset -5px 0px 10px 0px rgba(0, 0, 0, 0.4),
-    inset 5px 0px 10px 0px rgba(255, 255, 255, 0.1);
-}
-::-webkit-scrollbar-thumb:vertical::before {
-  content: "hi";
-  color: white;
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+  display: none;
 }

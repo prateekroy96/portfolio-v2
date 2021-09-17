@@ -17,7 +17,7 @@
   <div style="margin-top: 50px">
     <div class="section" *ngFor="let item of list; index as i">
       <div *ngIf="i % 2 == 0" class="row" style="margin: 50px 0px">
-        <div class="image-box col-md-6 col-sm-12" style="height: 400px">
+        <div class="image-box col-md-6 col-sm-12" style="height: 420px">
           <img class="image" src="{{ item.image }}" alt="" srcset="" />
           <div class="floor"></div>
         </div>
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div *ngIf="i % 2 == 1" class="row" style="margin: 50px 0px">
-        <div class="col-md-6 col-sm-12" style="height: 400px">
+        <div class="col-md-6 col-sm-12" style="height: 420px">
           <h2 class="opacity-mid mt-5">{{ item.title }}</h2>
           <p class="opacity-mid mb-4" style="font-style: italic">
             {{ item.for }}
@@ -111,3 +111,34 @@
     </div>
   </div>
 </div>
+<!-- <div class="modal fade" id="imageModal" tabindex="-1" role="dialog">
+  <div
+    class="modal-dialog"
+    role="document"
+    style="background-color: white; box-shadow: none"
+  >
+    <div
+      class="modal-content"
+      style="
+        padding: 0px;
+        overflow: hidden;
+        height: 70vh;
+        background-color: transparent;
+        border: 0px;
+      "
+      data-dismiss="modal"
+    >
+      <div style="height: 100%; text-align: center">
+        <img
+          [src]="displayImage || '../../../../../assets/avatar.png'"
+          style="
+            height: 100%;
+            background-color: white;
+            cursor: zoom-out;
+            width: auto;
+          "
+        />
+      </div>
+    </div>
+  </div>
+</div> -->

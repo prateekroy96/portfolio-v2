@@ -22,7 +22,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   multi: any = [];
-  readonly totalExp: number = 26;
+  readonly totalExp: number = 30;
   // options
   showXAxis: boolean = true;
   showYAxis: boolean = true;
@@ -160,37 +160,39 @@ export class AboutComponent implements OnInit {
   skills: any[] = [
     {
       title: 'HTML',
-      pro_exp: 18,
+      pro_exp: 22,
       noob_exp: 8,
       abbr: 'HTML',
     },
     {
       title: 'CSS',
-      pro_exp: 12,
+      pro_exp: 22,
       noob_exp: 8,
       abbr: 'CSS',
     },
     {
       title: 'JavaScript',
-      pro_exp: 15,
+      pro_exp: 22,
       noob_exp: 7,
       abbr: 'JS',
     },
     {
       title: 'TypeScript',
-      pro_exp: 15,
+      pro_exp: 22,
       noob_exp: 3,
       abbr: 'TS',
     },
     {
       title: 'Python',
-      pro_exp: 1,
+      pro_exp: 2,
       noob_exp: 3,
       abbr: 'Py',
     },
+  ];
+  skills2: any[] = [
     {
       title: 'Angular',
-      pro_exp: 15,
+      pro_exp: 20,
       noob_exp: 2,
       abbr: 'Ng',
     },
@@ -202,13 +204,13 @@ export class AboutComponent implements OnInit {
     },
     {
       title: 'NodeJS',
-      pro_exp: 9,
+      pro_exp: 13,
       noob_exp: 5,
       abbr: 'Node',
     },
     {
       title: 'SQL',
-      pro_exp: 6,
+      pro_exp: 8,
       noob_exp: 2,
       abbr: 'SQL',
     },

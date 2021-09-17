@@ -21,3 +21,8 @@
 .image {
   max-width: 360px;
 }
+@media (max-width: 767px) {
+  .image {
+    max-width: 320px;
+  }
+}
