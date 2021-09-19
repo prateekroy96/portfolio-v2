@@ -1,20 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import {
-//   faWrench,
-//   faAddressCard,
-//   faPen,
-//   faGraduationCap,
-//   faChartBar,
-//   faStar,
-//   faChartLine,
-//   faRocket,
-//   faLaptop,
-//   faLightbulb,
-//   faCogs,
-//   faFile,
-//   faFileDownload,
-//   faFilePdf,
-// } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -41,26 +26,6 @@ export class AboutComponent implements OnInit {
   customColors: any = [];
   schemeType: string = 'linear';
 
-  onSelect(data): void {
-    // console.log('Item clicked', JSON.parse(JSON.stringify(data)));
-  }
-
-  onActivate(data): void {
-    // console.log('Activate', JSON.parse(JSON.stringify(data)));
-  }
-
-  onDeactivate(data): void {
-    // console.log('Deactivate', JSON.parse(JSON.stringify(data)));
-  }
-
-  // chart - end
-  // about: any = faAddressCard;
-  // educationIcon: any = faChartBar;
-  // skillIcon: any = faStar;
-  // expIcon: any = faChartLine;
-  // info: any = faFile;
-  // doc: any = faFileDownload;
-  // pdf: any = faFilePdf;
   jobStart: Date = new Date('2019-11-01');
   today: Date = new Date();
   offers: any[] = [
@@ -87,36 +52,7 @@ export class AboutComponent implements OnInit {
         "Websites don't have to be static, I love making pages come to life.",
     },
   ];
-  images: any[] = [
-    {
-      name: 'HTML',
-      url: '/assets/images/html.png',
-    },
-    {
-      name: 'CSS',
-      url: '/assets/images/css.png',
-    },
-    {
-      name: 'Angular',
-      url: '/assets/images/angular.png',
-    },
-    {
-      name: 'NodeJS',
-      url: '/assets/images/node.png',
-    },
-    {
-      name: 'Python',
-      url: '/assets/images/python.png',
-    },
-    {
-      name: 'SQL',
-      url: '/assets/images/mysql.png',
-    },
-    {
-      name: 'MongoDB',
-      url: '/assets/images/mongo.png',
-    },
-  ];
+
   bio: string[] = [
     "I'm a Full-Stack Developer based in Delhi, currently working for Beadcore Infotech in Noida, UP.",
     'I have serious passion for UI effects, animations as well as creating a better user experience.',
@@ -183,10 +119,10 @@ export class AboutComponent implements OnInit {
       abbr: 'TS',
     },
     {
-      title: 'Python',
-      pro_exp: 2,
-      noob_exp: 3,
-      abbr: 'Py',
+      title: 'Docker',
+      pro_exp: 4,
+      noob_exp: 4,
+      abbr: 'Docker',
     },
   ];
   skills2: any[] = [
@@ -197,12 +133,6 @@ export class AboutComponent implements OnInit {
       abbr: 'Ng',
     },
     {
-      title: 'React',
-      pro_exp: 4,
-      noob_exp: 0,
-      abbr: 'React',
-    },
-    {
       title: 'NodeJS',
       pro_exp: 13,
       noob_exp: 5,
@@ -210,7 +140,7 @@ export class AboutComponent implements OnInit {
     },
     {
       title: 'SQL',
-      pro_exp: 8,
+      pro_exp: 12,
       noob_exp: 2,
       abbr: 'SQL',
     },
@@ -220,28 +150,17 @@ export class AboutComponent implements OnInit {
       noob_exp: 2,
       abbr: 'Mongo',
     },
+    {
+      title: 'React',
+      pro_exp: 4,
+      noob_exp: 0,
+      abbr: 'React',
+    },
   ];
   options: any;
   constructor() {}
 
   ngOnInit(): void {
-    let current = {
-      HTML: true,
-      CSS: true,
-      JavaScript: true,
-      TypeScript: true,
-      Angular: true,
-      NodeJS: true,
-    };
-    // this.skills.map((skill: any) => {
-    //   if (current[skill.title]) {
-    //     skill.pro_exp = Math.round(
-    //       (this.today.getTime() - this.jobStart.getTime()) / 2592000000
-    //     );
-    //   }
-    //   return skill;
-    // });
-
     this.multi = [];
     for (let skill of this.skills) {
       this.multi.push({
